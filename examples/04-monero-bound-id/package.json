@@ -1,0 +1,14 @@
+{
+  "name": "xmrigger-recipe-04-monero-bound-id",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "Mesh identity bound to a Monero address signature.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}

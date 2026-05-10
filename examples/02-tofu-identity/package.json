@@ -1,0 +1,14 @@
+{
+  "name": "xmrigger-recipe-02-tofu-identity",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "Long-term ed25519 identity, trust on first use.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}

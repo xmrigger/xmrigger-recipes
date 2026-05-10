@@ -1,0 +1,14 @@
+{
+  "name": "xmrigger-recipe-01-listen-only",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "Listen to a xmrigger-mesh federation, no identity, no action.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}

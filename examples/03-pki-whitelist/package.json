@@ -1,0 +1,14 @@
+{
+  "name": "xmrigger-recipe-03-pki-whitelist",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "Allowlist of long-term ed25519 pubkeys; reject anything else.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}

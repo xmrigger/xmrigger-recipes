@@ -1,0 +1,14 @@
+{
+  "name": "xmrigger-recipe-05-pow-anti-sybil",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "Proof-of-work gate per mesh session.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}
