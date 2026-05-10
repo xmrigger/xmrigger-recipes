@@ -1,0 +1,17 @@
+{
+  "name": "xmrigger-recipe-00-mesh-loopback",
+  "version": "0.0.1",
+  "private": true,
+  "license": "LGPL-2.1",
+  "description": "End-to-end mesh handshake + broadcast test in a single Node process.",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "xmrigger-mesh": "github:xmrigger/xmrigger-mesh"
+  }
+}
