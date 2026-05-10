@@ -10,6 +10,10 @@ reader can decide what they need to add.
 | Passive eavesdropping on the wire                | X25519 ECDH derives a fresh symmetric key per session; AES-256-GCM on every frame. |
 | Active tampering with frames                     | AES-GCM auth tag. Every frame is verified; a single flipped bit drops the frame. |
 | Replay across sessions                           | Each session has its own keys. Old frames don't decrypt under new keys. |
+| **Replay within a session (since v0.2)**         | AAD = direction byte + monotonic seq is bound into the AES-GCM tag. Receivers drop frames whose direction doesn't match the peer's role or whose seq is not strictly greater than the last seen value. This stops both same-direction replay and direction-cross echo. |
+| **peerId squatting (since v0.2)**                | The local `peerId` is now derived from a SHA-256 of the peer's ECDH pubkey, not from a self-claimed `nodeId` field. An attacker cannot register their session under another peer's identifier. |
+| **Pre-handshake DoS via malformed HELLO (since v0.2)** | The handshake parser runs inside try/catch with a size cap and an SPKI sanity check. A peer sending garbage cannot crash the listener. |
+| **Pre-handshake memory exhaustion (since v0.2)**       | `WebSocketServer` and outbound `WebSocket` clients are constructed with `maxPayload: 4096`. Default 100 MB cap is no longer reachable. |
 | Forward secrecy after key compromise             | Ephemeral X25519, no long-term key material in the handshake. Compromising today's keypair doesn't expose yesterday's traffic. |
 
 ## What the mesh transport **does not** defend
